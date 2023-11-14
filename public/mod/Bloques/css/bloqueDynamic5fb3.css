@@ -1,0 +1,348 @@
+.nxBlockDynamicLayout7 .item {
+    position: relative;
+}
+
+.nxBlockDynamicLayout7 .new-tools-box {
+    position: absolute;
+    background-color: white;
+    width: 50%;
+    height: 33%;
+}
+
+.nxBlockDynamicLayout7 .new-tools-box.position1 {
+    top: 0;
+    left: 0;
+}
+
+.nxBlockDynamicLayout7 .new-tools-box.position2 {
+    top: 0;
+    left: 25%;
+}
+
+.nxBlockDynamicLayout7 .new-tools-box.position3 {
+    top: 0;
+    left: 50%;
+}
+
+.nxBlockDynamicLayout7 .new-tools-box.position4 {
+    top: 33%;
+    left: 0;
+}
+
+.nxBlockDynamicLayout7 .new-tools-box.position5 {
+    top: 33%;
+    left: 25%;
+}
+
+.nxBlockDynamicLayout7 .new-tools-box.position6 {
+    top: 33%;
+    left: 50%;
+}
+
+.nxBlockDynamicLayout7 .new-tools-box.position7 {
+    top: 66%;
+    left: 0;
+}
+
+.nxBlockDynamicLayout7 .new-tools-box.position8 {
+    top: 66%;
+    left: 25%;
+}
+
+.nxBlockDynamicLayout7 .new-tools-box.position9 {
+    top: 66%;
+    left: 50%;
+}
+
+.dynamicYoutube > div > a {
+    min-width: 100%;
+    min-height: 100%;
+}
+
+.dynamicYoutube > div > a > img {
+    margin: auto;
+}
+
+.nxBlockDynamicLayout8 {
+}
+
+.nxBlockDynamicLayout8 a {
+    display: block;
+    overflow: hidden;
+    padding: 0 15px;
+    width: 100%;
+}
+
+.nxBlockDynamicLayout8 a .title {
+    background: #ffffff none repeat scroll 0 0;
+    color: #555555;
+    display: block;
+    float: right;
+    font-size: 1em;
+    font-weight: 400;
+    height: 120px;
+    line-height: 1.125em;
+    overflow: hidden;
+    padding: 15px;
+    width: 75%;
+}
+
+.nxBlockDynamicLayout8 a:hover .title {
+    color: #215a9a;
+}
+
+.nxBlockDynamicLayout8 a .date {
+    background: #ffffff none repeat scroll 0 0;
+    color: #215a9a;
+    float: left;
+    height: 100px;
+    padding: 15px;
+    text-align: center;
+    width: 25%;
+}
+
+.nxBlockDynamicLayout8 a .date span {
+    display: block;
+    line-height: 1.125em;
+}
+
+.nxBlockDynamicLayout8 a .date .day {
+    font-size: 2.25em;
+}
+
+.nxBlockDynamicLayout8 a .date .month {
+    font-size: 1.25em;
+    font-weight: 400;
+}
+
+.nxBlockDynamicLayout8 a:hover .date {
+    background: #215a9a none repeat scroll 0 0;
+    color: #ffffff;
+}
+
+/* Slick Animations */
+.slick-slider [data-animation-in] {
+    z-index: 0;
+}
+
+.nxFxHover {
+    animation-duration: 0.3s
+}
+
+.nxParallax {
+    background-attachment: fixed !important; /* TODO cambiar en media/css/user.min.css L40: .nxBlock { background-COLOR: #FFFFFF;*/
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* Ajuste de la imagen en el contenedor */
+.item.nxImgAdjustHeight > a > .image > img, .item.nxImgAdjustHeight > div > a > img.youtube-player {
+    height: 100%;
+    width: auto;
+    min-height: 100%;
+    min-width: initial;
+    margin: 0 auto;
+}
+
+.item.nxImgAdjustWidth > a > .image > img, .item.nxImgAdjustWidth  > div > a > img.youtube-player {
+    height: auto;
+    width: 100%;
+    /*TODO Center vertically*/
+}
+
+.item.nxImgAdjustContainer > a > .image > img, .item.nxImgAdjustContainer  > div > a > img.youtube-player {
+    max-height: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    /*TODO Center vertically*/
+}
+
+.item.nxImgAdjustExpand > a > .image > img, .item.nxImgAdjustExpand  > div > a > img.youtube-player {
+    height: 100%;
+    width: 100%;
+}
+
+.documentos .icono .icon_class {
+    display: block;
+    height: 58px;
+    width: 46px;
+    margin: auto;
+}
+
+.documentos .pdf.background-img {
+    background: url(mod/Documentos/img/pdf.png) center no-repeat;
+}
+.documentos .doc.background-img {
+    background: url(mod/Documentos/img/doc.png) center no-repeat;
+}
+.documentos .rar.background-img{
+    background: url(mod/Documentos/img/rar.png) center no-repeat;
+}
+.documentos .zip.background-img{
+    background: url(mod/Documentos/img/zip.png) center no-repeat;
+}
+.documentos .xls.background-img{
+    background: url(mod/Documentos/img/xls.png) center no-repeat;
+}
+.documentos .ppt.background-img{
+    background: url(mod/Documentos/img/ppt.png) center no-repeat;
+}
+.documentos .default.background-img{
+    background: url(mod/Documentos/img/default.png) center no-repeat;
+}
+@media only screen and (min-width: 768px) {
+    .imgAdjustLayout7{
+        height: 1px !important;
+    }
+}
+img[data-lazy]{
+    width:0 !important;
+    height:0 !important;
+}
+
+
+/** VISTA CALENDARIO CON HORA */
+.nxBlockDynamicLayout9 a {
+    padding:0 1em;
+    display:block;
+    width:100%;
+    overflow:hidden;
+    text-decoration: none;
+}
+.nxBlockDynamicLayout9 a.content-box {
+    background: #FFFFFF;
+    border-radius: 0 0 1rem 1rem;
+    padding: 1rem 0;
+    margin: 0 1rem;
+    width: auto;
+    display: flex;
+    align-items: flex-start;
+}
+.nxBlockDynamicLayout9 a .date {
+    color:#215a9a;
+    width: 93px;
+    text-align:center;
+    height: 82px;
+}
+.nxBlockDynamicLayout9 a .date span {
+    display:block;
+    line-height:1.125em
+}
+.nxBlockDynamicLayout9 a .date .day {
+    font-size:1.25em;
+    line-height: 1.25;
+    margin-bottom: 0;
+}
+.nxBlockDynamicLayout9 a .date .month {
+    font-size:1.25em;
+    font-weight:400
+}
+.nxBlockDynamicLayout9 a .title {
+    color:#262626;
+    font-size:1.1em;
+    line-height:1.125em;
+    padding: 0 1em;
+    margin-bottom: 0;
+    width: calc(100% - 80px);
+    overflow:hidden;
+}
+.nxBlockDynamicLayout9 a .title .time-data {
+    display: block;
+    margin-top: .5rem;
+    font-weight: bold;
+}
+
+.nxBlockDynamicLayout9 .item:hover a.content-box {
+    background: #215a9a;
+    color: #FFFFFF;
+}
+.nxBlockDynamicLayout9 .item:hover a.content-box .date,
+.nxBlockDynamicLayout9 .item:hover a.content-box .title {
+    color: #FFFFFF;
+}
+
+.nxBlockDynamicLayout9 a.content-image {
+    padding: 0;
+    margin: 0 1rem;
+    border-radius: 1rem 1rem 0 0;
+    width: auto;
+}
+.nxBlockDynamicLayout9 a .image {
+    width:100%;
+    height:270px;
+    display:flex;
+    overflow:hidden;
+    position:relative;
+    font-size:0;
+    background-color: #F2F2F2;
+    justify-content: center;
+    align-items: center;
+}
+.nxBlockDynamicLayout9 a .image img {
+    height:100%;
+    width:100%;
+    object-fit: cover;
+    transition: 0.25s ease-in-out all;
+    transform: scale(1);
+}
+.nxBlockDynamicLayout9 .item:hover a .date {
+    background-color:#215a9a;
+    color:#fff
+}
+.nxBlockDynamicLayout9 .item:hover a .image:before {
+    background:rgba(33,90,154,0.5);
+    content:"";
+    display:block;
+    height:100%;
+    left:0;
+    overflow:hidden;
+    position:absolute;
+    text-align:center;
+    top:0;
+    width:100%;
+    z-index:2
+}
+.nxBlockDynamicLayout9 .item:hover a .image img {
+    transition: 0.25s ease-in-out all;
+    transform: scale(1.125);
+}
+.nxBlockDynamicLayout9 .itme:hover a .title {
+    color:#215a9a
+}
+
+.nxBlockDynamicLayout9 a .dateFormatHour {
+    margin-top: 15px;
+}
+/** PRESENTACION CALENDARIO CON IMAGEN Y TÍTULO HORIZONTAL */
+.nxBlockDynamicLayout9.nxBlockDesign2 .item {
+    display: inline-flex !important;
+    flex-flow: row;
+}
+.nxBlockDynamicLayout9.nxBlockDesign2 a.content-image {
+    width: 30%;
+    min-width: 220px;
+    border-radius: 1rem 0 0 1rem;
+    margin-right: 0;
+}
+.nxBlockDynamicLayout9.nxBlockDesign2 a.content-box {
+    width: 100%;
+    border-radius: 0 1rem 1rem 0;
+    margin-left: 0;
+}
+
+.contenido{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 40%;
+    margin-left: 31%; 
+}
+
+.itemsCalendario{
+    display: grid;
+    flex: 0 0 auto;
+    width: 100%;
+    height: 100%;
+    text-align: justify;
+}
