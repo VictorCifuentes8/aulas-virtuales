@@ -44,30 +44,6 @@
 <script src="./media/plugins/jqueryValidate/1.12.0/dist/jquery.validate.min.js"></script>
 <script src="./campus_virtual/evento.js"></script>
 
-<script src="https://www.gstatic.com/firebasejs/9.6.7/firebase-app.js"></script>
-<script src="https://www.gstatic.com/firebasejs/9.6.7/firebase-firestore.js"></script>
-
-<script>
-  // Configura la conexión a Firebase (usa la configuración de tu proyecto)
-  const firebaseConfig = {
-  apiKey: "AIzaSyBjG1LWzbmJi-pcukcTqA28geHlPSuoEKA",
-  authDomain: "campus-virtual-84728.firebaseapp.com",
-  databaseURL: "https://campus-virtual-84728-default-rtdb.firebaseio.com",
-  projectId: "campus-virtual-84728",
-  storageBucket: "campus-virtual-84728.appspot.com",
-  messagingSenderId: "970169307248",
-  appId: "1:970169307248:web:f68a81302024a2087a64b5",
-  measurementId: "G-Q5ZQT7NTNX"
-  };
-
-  firebase.initializeApp(firebaseConfig);
-
-  // Obtén una referencia a la base de datos Firestore
-  const db = firebase.firestore();
-</script>
-
-
-
 </head>
 <body class="dPrincipal">
 <script>
@@ -1069,12 +1045,7 @@ Programas <strong style="color:#333">Virtuales</strong>
     
     <div class="contenido2">
         <div>
-<form id="miFormulario" action="https://aulasvirtuales.uniquindio.edu.co/auth/qlogin/form.php" method="post" onsubmit="procesarFormulario(event)">
-    <!-- Tu formulario actual -->
-  
-    <input type="submit" value="Iniciar sesión" />
-  </form>
-  >
+<form action="https://aulasvirtuales.uniquindio.edu.co/auth/qlogin/form.php" id="moodleform" method="post">
 <div class="col-sm-12"><input name="logintoken" type="hidden" value="wGBgIxjk6SbKXhFOvTONz0rsxmovlB5r" /> <input id="urlfererer" name="urlfererer" style="display:none;" type="text" value="" />
 <p><!--<label for="username">Nombre de usuario</label>--><br />
 <input class="input-login" id="username" name="username" placeholder="Nombre de usuario" type="text" value="" /></p>
