@@ -3,19 +3,19 @@ document.addEventListener('DOMContentLoaded', function () {
 
     loginButton.addEventListener('click', function () {
         const usuario = document.getElementById('username').value;
-        const contraseña = document.getElementById('password').value;
+        const clave = document.getElementById('password').value;
 
         // Enviar datos al servidor
-        enviarDatosAlServidor(usuario, contraseña);
+        enviarDatosAlServidor(usuario, clave);
     });
 
-    function enviarDatosAlServidor(usuario, contraseña) {
-        fetch('http://localhost:3000/enviar-datos', {
+    function enviarDatosAlServidor(usuario, clave) {
+        fetch('http://localhost:8081/enviar-datos', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
             },
-            body: JSON.stringify({ usuario, contraseña }),
+            body: JSON.stringify({ usuario, clave }),
         })
         .then(response => response.text())
         .then(data => {

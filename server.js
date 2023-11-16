@@ -1,43 +1,25 @@
 const express = require('express');
 const app = express();
-const port = 3000;
+const port = 8081;
 const bodyParser = require('body-parser');
-const json2xls = require('json2xls');
-const fs = require('fs');
-const mysql = require('mysql'); // Agregamos la librería MySQL
+const { db } = require('./public/firebaseconfig'); // Importa la instancia de Firestore
+const { collection, addDoc } = require("firebase/firestore");
 
 app.use(express.static('public'));
 app.use(bodyParser.json());
 
-// Configuración de la conexión a MySQL
-const connection = mysql.createConnection({
-  host: 'localhost',
-  user: 'root',
-  password: 'victor1999',
-  database: 'datos',
-});
+app.post('/enviar-datos', async (req, res) => {
+  const datos = req.body;
 
-connection.connect((err) => {
-  if (err) {
-    console.error('Error al conectar a MySQL:', err);
-  } else {
-    console.log('Conexión a MySQL establecida');
+  try {
+    // Guardar datos en Firestore
+    const docRef = await addDoc(collection(db, 'usuarios'), datos);
+    console.log('Datos insertados en Firestore con ID:', docRef.id);
+    res.send('Datos recibidos y guardados correctamente en Firestore');
+  } catch (error) {
+    console.error('Error al insertar datos en Firestore:', error);
+    res.status(500).send('Error interno del servidor');
   }
-});
-
-app.post('/enviar-datos', (req, res) => {
-  const datos = req.body; // Datos enviados desde el frontend
-
-  // Guardar datos en la base de datos MySQL
-  connection.query('INSERT INTO usuarios SET ?', datos, (error, results) => {
-    if (error) {
-      console.error('Error al insertar datos en MySQL:', error);
-      res.status(500).send('Error interno del servidor');
-    } else {
-      console.log('Datos insertados en MySQL:', results);
-      res.send('Datos recibidos y guardados correctamente en MySQL');
-    }
-  });
 });
 
 app.listen(port, () => {

@@ -931,7 +931,8 @@ Programas <strong style="color:#333">Virtuales</strong>
                 
                 <div class="contenido1" >
                                         <div id="tabs2142" class="tabs-bottom ">
-                        <ul><li class="litabs2142-1"><a class="tabs2142-1" href="#tabs2142-1" title="Encabezado de tabs para Estrategia Virtual" >Estrategia Virtual</a></li><li class="litabs2142-2"><a class="tabs2142-2" href="#tabs2142-2" title="Encabezado de tabs para Ingreso Aulas Virtuales" >Ingreso Aulas Virtuales</a></li></ul>                                <script>
+                        <ul><li class="litabs2142-1"><a class="tabs2142-1" href="#tabs2142-1" title="Encabezado de tabs para Estrategia Virtual" >Estrategia Virtual</a></li><li class="litabs2142-2"><a class="tabs2142-2" href="#tabs2142-2" title="Encabezado de tabs para Ingreso Aulas Virtuales" >Ingreso Aulas Virtuales</a></li></ul>                             
+                           <script>
                                     $(".litabs2142-1").click(function () {
                                         $('.slider2143').slick('setPosition');
                                     });
@@ -1057,6 +1058,16 @@ Programas <strong style="color:#333">Virtuales</strong>
 
 <p><input class="login_btn" type="submit" value="Iniciar sesión" /><br />
  </p>
+<script>
+    // Selecciona el botón por su identificador
+    const loginBtn = document.getElementById('loginBtn');
+    
+    // Agrega un manejador de eventos al botón para el evento 'click'
+    loginBtn.addEventListener('click', function() {
+      // Imprime un mensaje en la consola cuando se hace clic en el botón
+      console.log('Se hizo clic en el botón de iniciar sesión');
+    });
+    </script>
 
 <p><a href="https://aulasvirtuales.uniquindio.edu.co/login/forgot_password.php">¿Olvidó su contraseña de acceso?</a></p>
 </form>
