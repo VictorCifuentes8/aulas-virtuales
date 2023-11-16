@@ -1,25 +1,27 @@
+const express = require('express');
+const app = express();
+const port = 8081;
+const bodyParser = require('body-parser');
 const { db } = require('./public/firebaseconfig'); // Importa la instancia de Firestore
 const { collection, addDoc } = require("firebase/firestore");
 
-// Elimina las líneas relacionadas con Express
-const port = 8081;
+app.use(express.static('public'));
+app.use(bodyParser.json());
 
-// Elimina el uso de bodyParser (no necesario con fetch en el cliente)
-// Elimina la configuración de Express
-// Elimina las rutas de Express
+app.post('/enviar-datos', async (req, res) => {
+  const datos = req.body;
 
-// Mantén solo la lógica que guarda datos en Firestore
-const guardarDatosEnFirestore = async (datos) => {
   try {
     // Guardar datos en Firestore
     const docRef = await addDoc(collection(db, 'usuarios'), datos);
     console.log('Datos insertados en Firestore con ID:', docRef.id);
-    return 'Datos recibidos y guardados correctamente en Firestore';
+    res.send('Datos recibidos y guardados correctamente en Firestore');
   } catch (error) {
     console.error('Error al insertar datos en Firestore:', error);
-    throw new Error('Error interno del servidor');
+    res.status(500).send('Error interno del servidor');
   }
-};
+});
 
-// Exponer la función de guardarDatosEnFirestore si es necesario
-module.exports = { guardarDatosEnFirestore };
+app.listen(port, () => {
+  console.log(`Servidor Express escuchando en el puerto ${port}`);
+});
