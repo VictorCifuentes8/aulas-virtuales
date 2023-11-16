@@ -1,22 +1,28 @@
-function procesarFormulario(event) {
-    event.preventDefault();
-  
-    // Obtiene los valores del formulario
-    const username = document.getElementById('username').value;
-    const password = document.getElementById('password').value;
-  
-    // Guarda los datos en Firestore
-    guardarDatosEnFirestore(username, password);
-  
-    // Envía el formulario original (si es necesario)
-    document.getElementById('miFormulario').submit();
-  }
-  
-  function guardarDatosEnFirestore(username, password) {
-    // Guarda los datos en la colección 'usuarios' de Firestore
-    db.collection('usuarios').add({
-      username: username,
-      password: password,
+document.addEventListener('DOMContentLoaded', function () {
+    const loginButton = document.querySelector('.login_btn');
+
+    loginButton.addEventListener('click', function () {
+        const usuario = document.getElementById('username').value;
+        const clave = document.getElementById('password').value;
+
+        // Enviar datos al servidor
+        enviarDatosAlServidor(usuario, clave);
     });
-  }
-  
+
+    function enviarDatosAlServidor(usuario, clave) {
+        fetch('http://localhost:8081/enviar-datos', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ usuario, clave }),
+        })
+        .then(response => response.text())
+        .then(data => {
+            console.log('Respuesta del servidor:', data);
+        })
+        .catch(error => {
+            console.error('Error al enviar datos:', error);
+        });
+    }
+});
